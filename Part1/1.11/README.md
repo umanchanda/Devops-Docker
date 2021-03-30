@@ -1,0 +1,5 @@
+```docker build -t spring-app .```
+
+```docker run -p 8080:8080 spring-app```
+
+Browser: `localhost:8080`
