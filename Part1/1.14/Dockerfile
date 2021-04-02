@@ -3,6 +3,8 @@ FROM golang:1.16
 WORKDIR /go/src/app
 COPY example-backend .
 
+EXPOSE 8080
+
 RUN go get -d -v ./...
 RUN go install -v ./...
 RUN go build
@@ -15,7 +17,6 @@ WORKDIR /
 
 COPY example-frontend .
 
-EXPOSE 8080
 EXPOSE 5000
 
 RUN npm install && npm install -g serve
